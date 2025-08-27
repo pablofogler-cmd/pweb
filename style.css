@@ -1,60 +1,57 @@
-/* Fondo adaptativo */
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: system-ui, sans-serif;
-  background: url("./fondo.jpg") no-repeat center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+/* --- BLOQUE 1: Portada --- */
+.portada {
+    min-height: 100vh;
+    background: url("fondo.jpg") no-repeat center/cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+.portada .contenido {
+    background: rgba(0,0,0,0.5);
+    padding: 30px 20px;
+    border-radius: 20px;
+}
+.portada h1 { font-size: clamp(2rem, 5vw, 3rem); }
+.portada h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
 
-/* Tarjeta central */
-.card {
-  width: 100%;
-  max-width: 420px;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-  text-align: center;
+/* --- BLOQUE 2: Cuenta regresiva --- */
+.countdown {
+    background: linear-gradient(135deg, #ff4081, #ff77a9);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
 }
+.countdown h2 { font-size: clamp(1.5rem, 5vw, 2.2rem); margin-bottom: 1em; }
+.timer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.timer div {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 70px;
+}
+.timer span { display: block; font-size: clamp(1.5rem,6vw,2rem); font-weight: bold; }
+.timer small { font-size: 0.9rem; }
 
-/* Textos responsivos */
-h1 {
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
-  margin-bottom: 0.5em;
+/* --- BLOQUE 3: Botón play/pause --- */
+#play-pause {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: gainsboro;
+    border: 2px solid #fff;
+    background-image: url('play-icon.svg'); /* poner icono play */
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-h2 {
-  font-size: clamp(1.2rem, 4vw, 1.8rem);
-  margin-bottom: 1em;
-}
-p {
-  font-size: clamp(0.9rem, 3vw, 1.2rem);
-  margin: 0.5em 0;
-}
-
-/* Botón */
-button {
-  margin-top: 1.5em;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 12px;
-  background: #ff4081;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-button:hover {
-  background: #e73370;
-}
-
-/* Audio fijo en esquina inferior */
-audio {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  width: 200px;
+#play-pause.pause {
+    background-image: url('pause-icon.svg'); /* poner icono pause */
 }

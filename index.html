@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Invitación 15</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta 15 Años</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-    <h1>¡Mis 15 Años!</h1>
-    <h2>Ema</h2>
-    <p>Te invito a compartir conmigo una noche muy especial ✨</p>
-    <p><strong>📅 Fecha:</strong> 14 de Noviembre 2025</p>
-    <p><strong>📍 Lugar:</strong> Salón La Juana</p>
-    <button onclick="window.location.href='https://wa.me/5491112345678?text=Confirmo%20mi%20asistencia'">
-      Confirmar asistencia
-    </button>
-  </div>
 
-  <!-- Música de fondo -->
-  <audio autoplay loop controls>
-    <source src="./Iframe Beyoncé - Halo [bnVUHWCynig].mp3" type="audio/mpeg">
-    Tu navegador no soporta audio.
-  </audio>
+    <!-- BLOQUE 1: Portada -->
+    <section class="portada">
+        <div class="contenido">
+            <h1>Cande</h1>
+            <h2>¡Mis 15 años!</h2>
+        </div>
+    </section>
+
+    <!-- BLOQUE 2: Cuenta regresiva -->
+    <section class="countdown">
+        <h2>¡Faltan solo…!</h2>
+        <div class="timer" id="timer">
+            <div>
+                <span id="days">0</span>
+                <small>Días</small>
+            </div>
+            <div>
+                <span id="hours">0</span>
+                <small>Horas</small>
+            </div>
+            <div>
+                <span id="minutes">0</span>
+                <small>Minutos</small>
+            </div>
+            <div>
+                <span id="seconds">0</span>
+                <small>Segundos</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE 3: Música de fondo -->
+    <div class="position-relative">
+        <div class="position-fixed" style="z-index: 9; top: calc(100vh - 80px); left: 20px;">
+            <div id="play-pause" class="play"></div>
+            <audio id="track" preload="auto">
+                <source src="./Iframe Beyoncé - Halo [bnVUHWCynig].mp3" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- BLOQUE 4: Sugerencias de canciones -->
+    <section id="playlist">
+        <div class="container">
+            <h3>¿Qué canciones no pueden faltar?</h3>
+            <form id="musicForm">
+                <input type="text" name="name" placeholder="Nombre de la canción*" required>
+                <input type="text" name="author" placeholder="Autor*" required>
+                <input type="text" name="link" placeholder="Link youtube, spotify..">
+                <button id="sendMusicFrm">Enviar</button>
+                <p id="musicFormMessage"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
 
