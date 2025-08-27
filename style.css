@@ -4,7 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: url("pweb/multimedia/fondo.jpg") no-repeat center center/cover;
+  background: url("./fondo.jpg") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,5 +71,6 @@ p {
 #musicBtn:hover {
   background: #483d8b;
 }
+
 
 
