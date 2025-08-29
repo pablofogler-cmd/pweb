@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarjeta 15 Años</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- BLOQUE 1: Portada -->
@@ -51,21 +53,22 @@
     </div>
 
     <!-- BLOQUE 4: Sugerencias de canciones -->
-    <section id="playlist">
-        <div class="container">
-            <h3>¿Qué canciones no pueden faltar?</h3>
-            <form id="musicForm">
-                <input type="text" name="name" placeholder="Nombre de la canción*" required>
-                <input type="text" name="author" placeholder="Autor*" required>
-                <input type="text" name="link" placeholder="Link youtube, spotify..">
-                <button id="sendMusicFrm">Enviar</button>
-                <p id="musicFormMessage"></p>
-            </form>
+    <section class="sugerencias" id="sugerencias">
+        <h2>🎶 Sugerí tu canción favorita</h2>
+        <p>Ayudanos a armar la playlist de la fiesta 💃🕺</p>
+
+        <div class="formulario-google">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLScQtC35DptNX7A1i2qh-rSc5LVWWSYwdYMR4NEy-BwAPgju4A/viewform?embedded=true"
+                frameborder="0" marginheight="0" marginwidth="0">
+            Cargando…
+            </iframe>
         </div>
     </section>
+
 
     <!-- JS -->
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>

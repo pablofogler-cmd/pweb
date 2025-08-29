@@ -9,7 +9,7 @@
     text-align: center;
 }
 .portada .contenido {
-    background: rgba(0,0,0,0.5);
+    background: #0000004b;
     padding: 30px 20px;
     border-radius: 20px;
 }
@@ -18,7 +18,7 @@
 
 /* --- BLOQUE 2: Cuenta regresiva --- */
 .countdown {
-    background: linear-gradient(135deg, #ff4081, #ff77a9);
+    background: linear-gradient(135deg, #cc40ff, #ff77fa);
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -47,11 +47,48 @@
     border-radius: 50%;
     background-color: gainsboro;
     border: 2px solid #fff;
-    background-image: url('play-icon.svg'); /* poner icono play */
+    background-image: url('./play-square-svgrepo-com.svg'); /* poner icono play */
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
 }
 #play-pause.pause {
-    background-image: url('pause-icon.svg'); /* poner icono pause */
+    background-image: url('./pause-square-svgrepo-com.svg'); /* poner icono pause */
 }
+
+/* Bloque 4 - Sugerencias de canciones */
+.sugerencias {
+    background: #f7f7f7;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sugerencias h2 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    color: #ff4081;
+    margin-bottom: 15px;
+}
+
+.sugerencias p {
+    margin-bottom: 25px;
+    color: #444;
+}
+
+/* Contenedor del formulario */
+.formulario-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del iframe */
+.formulario-google iframe {
+    width: 90%;
+    max-width: 500px;   /* no se estira demasiado en pantallas grandes */
+    height: 600px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: 2px solid lch(58.49% 74.78 7.09 / 0.103); /* borde para que combine con la tarjeta */
+    background: white;
+}
+
